@@ -1,0 +1,49 @@
+@layout('layouts.app')
+
+@section('content')
+    <div class="row justify-content-center pt-1">
+        <div class="col-10 p-1">
+            <h1 class="display-6">Insertar Clase</h1>
+        </div>
+    </div>
+    <div class="row justify-content-center pt-2">
+        <div class="col-10 p-3">
+            <form action="/ingresarClase/guardar" method="POST">
+                <div class="form-group">
+                    <label for="">Nombre</label>
+                    <input type="text" class="form-control" name="nombre" placeholder="Ingresa nombre" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="">Horario</label>
+                    <input type="text" class="form-control" name="horario" placeholder="Ej. 10:00 a 13:00 Ju" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="">Idioma</label>
+                    <input type="text" class="form-control" name="idioma" placeholder="Ingresa idioma" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="">Salon </label>
+                    <input type="number" class="form-control" name="salon" placeholder="Ingresa salon" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="">Profesor</label>
+                    <input type="text" class="form-control" name="profesor" placeholder="Ingresa profesor" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="">Alumnos (dividido por comas)</label>
+                    <input type="text" class="form-control" name="alumnos" placeholder="Ej. A08036070, A09058470" required>
+                </div>
+
+                <div class="form-group">
+                    <input type="submit" class="btn btn-primary">
+                </div>
+            </form>
+        </div>
+    </div>
+
+@endsection
